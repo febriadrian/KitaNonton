@@ -1,0 +1,12 @@
+/Application/*
+/Extension/*
+/Helper/*
+/Constants/*
+/AppRouter/*
+/Initializer/*
+/Router/*
+/ReusableView/*
+/Model/*
+/ViewController/*
+/DBService/*
+/NetworkService/Endpoint.swift
