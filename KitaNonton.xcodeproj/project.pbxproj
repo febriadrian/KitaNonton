@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97669542B7EC1420973EEE04 /* Pods_KitaNontonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6121E56D73CA1B7C29EE0E95 /* Pods_KitaNontonTests.framework */; };
 		BEAF49CBDA741BAAB1597BA3 /* KitaNontonTests-KitaNontonMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E024CE0BCB137C002AD95F4E /* KitaNontonTests-KitaNontonMocks.generated.swift */; };
+		DC8356FE772CD9523A746B03 /* Pods_KitaNonton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63018A1C16FE99F1C74B5D92 /* Pods_KitaNonton.framework */; };
 		FD07D8A925962DCE002B8BC0 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD07D8A825962DCE002B8BC0 /* ErrorResponse.swift */; };
 		FD07D8B325964861002B8BC0 /* KitaNontonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD07D8B225964861002B8BC0 /* KitaNontonTests.swift */; };
 		FD07D8BB2596489A002B8BC0 /* HomeMoviesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD07D8BA2596489A002B8BC0 /* HomeMoviesViewModelTests.swift */; };
@@ -104,6 +106,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6121E56D73CA1B7C29EE0E95 /* Pods_KitaNontonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KitaNontonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63018A1C16FE99F1C74B5D92 /* Pods_KitaNonton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KitaNonton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B77885D064639299EB8E131 /* Pods-KitaNontonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KitaNontonTests.debug.xcconfig"; path = "Target Support Files/Pods-KitaNontonTests/Pods-KitaNontonTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7B9E7D663AD7847E5D2E3E2C /* Pods-KitaNonton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KitaNonton.debug.xcconfig"; path = "Target Support Files/Pods-KitaNonton/Pods-KitaNonton.debug.xcconfig"; sourceTree = "<group>"; };
+		D0ED249C3BEFE5B9AEEDC8B6 /* Pods-KitaNonton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KitaNonton.release.xcconfig"; path = "Target Support Files/Pods-KitaNonton/Pods-KitaNonton.release.xcconfig"; sourceTree = "<group>"; };
+		D6C74F51123973C5E95D9591 /* Pods-KitaNontonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KitaNontonTests.release.xcconfig"; path = "Target Support Files/Pods-KitaNontonTests/Pods-KitaNontonTests.release.xcconfig"; sourceTree = "<group>"; };
 		E024CE0BCB137C002AD95F4E /* KitaNontonTests-KitaNontonMocks.generated.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "KitaNontonTests-KitaNontonMocks.generated.swift"; path = "MockingbirdMocks/KitaNontonTests-KitaNontonMocks.generated.swift"; sourceTree = "<group>"; };
 		FD07D8A825962DCE002B8BC0 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		FD07D8B025964861002B8BC0 /* KitaNontonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KitaNontonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,6 +207,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97669542B7EC1420973EEE04 /* Pods_KitaNontonTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +215,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC8356FE772CD9523A746B03 /* Pods_KitaNonton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,9 +230,22 @@
 			name = "Generated Mocks";
 			sourceTree = "<group>";
 		};
+		69AE1A65B2758237F063F8F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63018A1C16FE99F1C74B5D92 /* Pods_KitaNonton.framework */,
+				6121E56D73CA1B7C29EE0E95 /* Pods_KitaNontonTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BA876AC3DAACDEACE696AFAE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				7B9E7D663AD7847E5D2E3E2C /* Pods-KitaNonton.debug.xcconfig */,
+				D0ED249C3BEFE5B9AEEDC8B6 /* Pods-KitaNonton.release.xcconfig */,
+				7B77885D064639299EB8E131 /* Pods-KitaNontonTests.debug.xcconfig */,
+				D6C74F51123973C5E95D9591 /* Pods-KitaNontonTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -312,6 +335,7 @@
 				FD4C699225942FB70078724A /* Products */,
 				BA876AC3DAACDEACE696AFAE /* Pods */,
 				027E88C48F013D832E3C5464 /* Generated Mocks */,
+				69AE1A65B2758237F063F8F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -593,11 +617,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD07D8B725964861002B8BC0 /* Build configuration list for PBXNativeTarget "KitaNontonTests" */;
 			buildPhases = (
+				98A1927FC6042F11555EE7A2 /* [CP] Check Pods Manifest.lock */,
 				1DE3FE378AC1876DA0DF15F8 /* Clean Mockingbird Mocks */,
 				FD0D6F1456F96A386C347C74 /* Generate Mockingbird Mocks */,
 				FD07D8AC25964861002B8BC0 /* Sources */,
 				FD07D8AD25964861002B8BC0 /* Frameworks */,
 				FD07D8AE25964861002B8BC0 /* Resources */,
+				BFA5D2F66FB6B74E0FBC2CB0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -613,9 +639,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD4C69A525942FB80078724A /* Build configuration list for PBXNativeTarget "KitaNonton" */;
 			buildPhases = (
+				5BCB875A6D1A83A4C7A14198 /* [CP] Check Pods Manifest.lock */,
 				FD4C698D25942FB70078724A /* Sources */,
 				FD4C698E25942FB70078724A /* Frameworks */,
 				FD4C698F25942FB70078724A /* Resources */,
+				A638DA02F5F86785132B37AD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -713,6 +741,84 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "echo $RANDOM > '/tmp/Mockingbird-0A3ADF49-941D-4997-BAF4-5F2216FFF39F'\n";
+		};
+		5BCB875A6D1A83A4C7A14198 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KitaNonton-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98A1927FC6042F11555EE7A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KitaNontonTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A638DA02F5F86785132B37AD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KitaNonton/Pods-KitaNonton-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KitaNonton/Pods-KitaNonton-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KitaNonton/Pods-KitaNonton-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFA5D2F66FB6B74E0FBC2CB0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KitaNontonTests/Pods-KitaNontonTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KitaNontonTests/Pods-KitaNontonTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KitaNontonTests/Pods-KitaNontonTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		FD0D6F1456F96A386C347C74 /* Generate Mockingbird Mocks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -846,6 +952,7 @@
 /* Begin XCBuildConfiguration section */
 		FD07D8B825964861002B8BC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B77885D064639299EB8E131 /* Pods-KitaNontonTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -866,6 +973,7 @@
 		};
 		FD07D8B925964861002B8BC0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6C74F51123973C5E95D9591 /* Pods-KitaNontonTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -934,7 +1042,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -988,7 +1096,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1000,6 +1108,7 @@
 		};
 		FD4C69A625942FB80078724A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B9E7D663AD7847E5D2E3E2C /* Pods-KitaNonton.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1021,6 +1130,7 @@
 		};
 		FD4C69A725942FB80078724A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0ED249C3BEFE5B9AEEDC8B6 /* Pods-KitaNonton.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

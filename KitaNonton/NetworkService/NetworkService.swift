@@ -6,7 +6,6 @@
 //  Copyright © 2020 Febri Adrian. All rights reserved.
 //
 
-import Foundation
 import Alamofire
 
 enum FetchResult<Success, GeneralError> {
@@ -30,7 +29,7 @@ struct NetworkStatus {
 
 class NetworkService {
     static let share = NetworkService()
-    private var dataRequest: DataRequest!
+    private var dataRequest: DataRequest?
 
     @discardableResult
     private func _dataRequest(endpoint: IEndpoint) -> DataRequest {
@@ -46,20 +45,22 @@ class NetworkService {
             completion(.failure(nil))
             return
         }
+        
+        DispatchQueue.global(qos: .background).async {
+            self.dataRequest = self._dataRequest(endpoint: endpoint)
+            self.dataRequest?.validate().responseDecodable(decoder: jsonDecoder()) {
+                (response: AFDataResponse<T>) in
+                TRACER(endpoint, response)
 
-        dataRequest = _dataRequest(endpoint: endpoint)
-        dataRequest.validate().responseDecodable(decoder: jsonDecoder()) {
-            (response: AFDataResponse<T>) in
-            TRACER(endpoint, response)
-
-            switch response.result {
-            case .success(let response):
-                completion(.success(response))
-            case .failure:
-                if let data = response.data, let errorResponse = try? jsonDecoder().decode(ErrorResponse.self, from: data) {
-                    completion(.failure(errorResponse))
-                } else {
-                    completion(.failure(nil))
+                switch response.result {
+                case .success(let response):
+                    completion(.success(response))
+                case .failure:
+                    if let data = response.data, let errorResponse = try? jsonDecoder().decode(ErrorResponse.self, from: data) {
+                        completion(.failure(errorResponse))
+                    } else {
+                        completion(.failure(nil))
+                    }
                 }
             }
         }
@@ -74,8 +75,6 @@ func jsonDecoder() -> JSONDecoder {
     return decoder
 }
 
-
-
 private func TRACER<T: Decodable>(_ endpoint: IEndpoint, _ response: AFDataResponse<T>) {
     let seconds = response.metrics?.taskInterval.duration ?? 0
     let duration = (seconds * 10000).rounded() / 10000
@@ -84,11 +83,11 @@ private func TRACER<T: Decodable>(_ endpoint: IEndpoint, _ response: AFDataRespo
     --------------------------TRACING START-------------------------
     [REQUEST]: \(endpoint.method.rawValue) \(endpoint.path) '\(duration)s'
     
+    [HEADERS]: \(endpoint.headers == nil ? "-" : "\n" + (endpoint.headers!.dictionary.toJSON!))
+    
     [ENCODING]: \(endpoint.encoding)
     
     [PARAMETERS]: \(endpoint.parameters == nil ? "-" : "\n" + (endpoint.parameters!.toJSON!))
-    
-    [HEADERS]: \(endpoint.headers == nil ? "-" : "\n" + (endpoint.headers!.dictionary.toJSON!))
     
     [RESPONSE]: \(response.data?.toJSON == nil ? "-" : "\n" + response.data!.toJSON!)
     --------------------------TRACING STOP--------------------------

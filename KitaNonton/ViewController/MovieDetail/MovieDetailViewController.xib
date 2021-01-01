@@ -14,6 +14,7 @@
                 <outlet property="favoriteButton" destination="tcc-xL-aBV" id="VWf-FU-YoS"/>
                 <outlet property="headerViewTopConstraint" destination="PmL-es-1TO" id="bBO-xv-qJt"/>
                 <outlet property="leadingIndicatorConstraint" destination="z73-At-geR" id="Xmh-92-rgl"/>
+                <outlet property="menuIndicatorWidthConstraint" destination="zAd-zx-aEc" id="SGR-kV-0Fr"/>
                 <outlet property="menuView" destination="Kof-Eh-iMu" id="Zvv-WU-mBa"/>
                 <outlet property="menuViewTopConstraint" destination="ULa-df-Ohy" id="SeS-s3-Sxp"/>
                 <outlet property="posterHeightConstraint" destination="Xr1-f4-P15" id="UpH-XR-LXl"/>
@@ -177,10 +178,10 @@
                                             </subviews>
                                         </stackView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rdm-LY-CSA" userLabel="IndicatorView">
-                                            <rect key="frame" x="0.0" y="38" width="136.5" height="2"/>
+                                            <rect key="frame" x="0.0" y="37" width="207" height="3"/>
                                             <color key="backgroundColor" red="0.23137254901960785" green="0.55686274509803924" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="2" id="vc1-Yu-dG5"/>
+                                                <constraint firstAttribute="height" constant="3" id="vc1-Yu-dG5"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2wS-UY-trI">
@@ -203,7 +204,7 @@
                                         <constraint firstAttribute="trailing" secondItem="Sht-YA-LhF" secondAttribute="trailing" id="cVh-b4-vkp"/>
                                         <constraint firstItem="Sht-YA-LhF" firstAttribute="leading" secondItem="Kof-Eh-iMu" secondAttribute="leading" id="rIT-TI-feg"/>
                                         <constraint firstItem="Rdm-LY-CSA" firstAttribute="leading" secondItem="Kof-Eh-iMu" secondAttribute="leading" id="z73-At-geR"/>
-                                        <constraint firstItem="Rdm-LY-CSA" firstAttribute="width" secondItem="Kof-Eh-iMu" secondAttribute="width" multiplier="0.33" id="zAd-zx-aEc"/>
+                                        <constraint firstItem="Rdm-LY-CSA" firstAttribute="width" secondItem="Kof-Eh-iMu" secondAttribute="width" multiplier="0.5" id="zAd-zx-aEc"/>
                                     </constraints>
                                 </view>
                                 <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgW-Bu-afR" userLabel="TopBarsView">

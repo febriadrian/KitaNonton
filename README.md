@@ -1,12 +1,3 @@
-# How To Build
-
-Please instal pods first ^_^
-```sh
-$ sudo gem install cocoapods
-$ pod repo update
-$ pod install
-```
-
 # How To Run Unit Test
 
 First you need to install Mockingbird framework in your project, go to the Mockingbird Folder.

@@ -27,8 +27,7 @@ class MovieDetailReviewViewModelTests: KitaNontonTests {
     func testGetReviewsSuccess() {
         let successResponse: ReviewModel.Response! = getMockResponse(mock: .getReviewsSuccessResponse)
 
-        given(movieProviderMock.getReviews(id: any(),
-                                           completion: any())) ~> {
+        given(movieProviderMock.getReviews(id: any(), completion: any())) ~> {
             _, result in
             result(.success(successResponse))
         }
@@ -65,7 +64,7 @@ class MovieDetailReviewViewModelTests: KitaNontonTests {
 }
 
 extension MovieDetailReviewViewModelTests: MovieDetailReviewDelegate {
-    func displayGetMovies(result: GeneralResult) {
+    func displayGetReviews(result: GeneralResult) {
         switch result {
         case .success:
             print("success get reviews")

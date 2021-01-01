@@ -51,7 +51,7 @@ class MovieDetailReviewViewController: UIViewController {
 }
 
 extension MovieDetailReviewViewController: MovieDetailReviewDelegate {
-    func displayGetMovies(result: GeneralResult) {
+    func displayGetReviews(result: GeneralResult) {
         switch result {
         case .success:
             loadingView.stop()

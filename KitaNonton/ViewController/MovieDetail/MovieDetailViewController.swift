@@ -26,7 +26,8 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var runtimeLabel: UILabel!
     @IBOutlet weak var posterImage: UIImageView!
-
+    @IBOutlet weak var menuIndicatorWidthConstraint: NSLayoutConstraint!
+    
     var viewModel: IMovieDetailViewModel!
     var infoVC: MovieDetailInfoViewController!
     var reviewVC: MovieDetailReviewViewController!
@@ -76,6 +77,7 @@ class MovieDetailViewController: UIViewController {
         viewControllerList = [infoVC, reviewVC]
         menuCount = CGFloat(viewControllerList.count)
         indicatorWidth = screenWidth / menuCount
+        menuIndicatorWidthConstraint.constant = indicatorWidth
 
         pageViewController.delegate = self
         pageViewController.dataSource = self

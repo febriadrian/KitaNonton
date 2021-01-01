@@ -9,7 +9,7 @@
 import Foundation
 
 protocol MovieDetailReviewDelegate {
-    func displayGetMovies(result: GeneralResult)
+    func displayGetReviews(result: GeneralResult)
 }
 
 protocol IMovieDetailReviewViewModel {
@@ -50,15 +50,15 @@ class MovieDetailReviewViewModel: IMovieDetailReviewViewModel {
             case .success(let response):
                 if let results = response.results, results.count > 0 {
                     self.reviews = results.map { ReviewModel.ViewModel(review: $0) }
-                    self.delegate?.displayGetMovies(result: .success)
+                    self.delegate?.displayGetReviews(result: .success)
                 } else {
-                    self.delegate?.displayGetMovies(result: .failure(Messages.noReviews))
+                    self.delegate?.displayGetReviews(result: .failure(Messages.noReviews))
                 }
             case .failure(let errorResponse):
                 if let errorMessage = errorResponse?.message {
-                    self.delegate?.displayGetMovies(result: .failure(errorMessage))
+                    self.delegate?.displayGetReviews(result: .failure(errorMessage))
                 } else {
-                    self.delegate?.displayGetMovies(result: .failure(Messages.generalError))
+                    self.delegate?.displayGetReviews(result: .failure(Messages.generalError))
                 }
             }
         }
