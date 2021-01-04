@@ -736,11 +736,11 @@
 			);
 			name = "Clean Mockingbird Mocks";
 			outputPaths = (
-				"/tmp/Mockingbird-0A3ADF49-941D-4997-BAF4-5F2216FFF39F",
+				"/tmp/Mockingbird-052F5500-DF3C-4D4B-8256-437EE41F87A7",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo $RANDOM > '/tmp/Mockingbird-0A3ADF49-941D-4997-BAF4-5F2216FFF39F'\n";
+			shellScript = "echo $RANDOM > '/tmp/Mockingbird-052F5500-DF3C-4D4B-8256-437EE41F87A7'\n";
 		};
 		21D99CCA751DC0227C8A5159 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -826,7 +826,7 @@
 			files = (
 			);
 			inputPaths = (
-				"/tmp/Mockingbird-0A3ADF49-941D-4997-BAF4-5F2216FFF39F",
+				"/tmp/Mockingbird-052F5500-DF3C-4D4B-8256-437EE41F87A7",
 			);
 			name = "Generate Mockingbird Mocks";
 			outputPaths = (
@@ -834,7 +834,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nmockingbird generate \\\n  --targets 'KitaNonton' \\\n  --outputs \"${SRCROOT}/MockingbirdMocks/KitaNontonTests-KitaNontonMocks.generated.swift\"\n\n# Ensure mocks are generated prior to running Compile Sources\nrm -f '/tmp/Mockingbird-0A3ADF49-941D-4997-BAF4-5F2216FFF39F'\n";
+			shellScript = "set -e\n\nmockingbird generate \\\n  --targets 'KitaNonton' \\\n  --outputs \"${SRCROOT}/MockingbirdMocks/KitaNontonTests-KitaNontonMocks.generated.swift\" \\\n  --support \"${SRCROOT}/MockingbirdSupport\"\n\n# Ensure mocks are generated prior to running Compile Sources\nrm -f '/tmp/Mockingbird-052F5500-DF3C-4D4B-8256-437EE41F87A7'\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
