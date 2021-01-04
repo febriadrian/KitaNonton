@@ -14,14 +14,14 @@ enum FetchResult<Success, GeneralError> {
 }
 
 protocol IEndpoint {
-    var path: String { get }
+    var url: String { get }
     var method: HTTPMethod { get }
     var parameters: Parameters? { get }
     var headers: HTTPHeaders? { get }
     var encoding: ParameterEncoding { get }
 }
 
-struct NetworkStatus {
+enum NetworkStatus {
     static var isInternetAvailable: Bool {
         return NetworkReachabilityManager()?.isReachable ?? false
     }
@@ -33,7 +33,7 @@ class NetworkService {
 
     @discardableResult
     private func _dataRequest(endpoint: IEndpoint) -> DataRequest {
-        return AF.request(endpoint.path,
+        return AF.request(endpoint.url,
                           method: endpoint.method,
                           parameters: endpoint.parameters,
                           encoding: endpoint.encoding,
@@ -45,7 +45,7 @@ class NetworkService {
             completion(.failure(nil))
             return
         }
-        
+
         DispatchQueue.global(qos: .background).async {
             self.dataRequest = self._dataRequest(endpoint: endpoint)
             self.dataRequest?.validate().responseDecodable(decoder: jsonDecoder()) {
@@ -81,14 +81,14 @@ private func TRACER<T: Decodable>(_ endpoint: IEndpoint, _ response: AFDataRespo
 
     let trace = """
     --------------------------TRACING START-------------------------
-    [REQUEST]: \(endpoint.method.rawValue) \(endpoint.path) '\(duration)s'
-    
+    [REQUEST]: \(endpoint.method.rawValue) \(endpoint.url) '\(duration)s'
+
     [HEADERS]: \(endpoint.headers == nil ? "-" : "\n" + (endpoint.headers!.dictionary.toJSON!))
-    
+
     [ENCODING]: \(endpoint.encoding)
-    
+
     [PARAMETERS]: \(endpoint.parameters == nil ? "-" : "\n" + (endpoint.parameters!.toJSON!))
-    
+
     [RESPONSE]: \(response.data?.toJSON == nil ? "-" : "\n" + response.data!.toJSON!)
     --------------------------TRACING STOP--------------------------
     """

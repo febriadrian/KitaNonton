@@ -623,7 +623,7 @@
 				FD07D8AC25964861002B8BC0 /* Sources */,
 				FD07D8AD25964861002B8BC0 /* Frameworks */,
 				FD07D8AE25964861002B8BC0 /* Resources */,
-				BFA5D2F66FB6B74E0FBC2CB0 /* [CP] Embed Pods Frameworks */,
+				21D99CCA751DC0227C8A5159 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -742,6 +742,23 @@
 			shellPath = /bin/sh;
 			shellScript = "echo $RANDOM > '/tmp/Mockingbird-0A3ADF49-941D-4997-BAF4-5F2216FFF39F'\n";
 		};
+		21D99CCA751DC0227C8A5159 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KitaNontonTests/Pods-KitaNontonTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KitaNontonTests/Pods-KitaNontonTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KitaNontonTests/Pods-KitaNontonTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5BCB875A6D1A83A4C7A14198 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -801,23 +818,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KitaNonton/Pods-KitaNonton-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BFA5D2F66FB6B74E0FBC2CB0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KitaNontonTests/Pods-KitaNontonTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KitaNontonTests/Pods-KitaNontonTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KitaNontonTests/Pods-KitaNontonTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD0D6F1456F96A386C347C74 /* Generate Mockingbird Mocks */ = {
@@ -1113,7 +1113,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9586AWQHTX;
+				DEVELOPMENT_TEAM = 6N749ZZ4B3;
 				INFOPLIST_FILE = KitaNonton/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1135,7 +1135,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9586AWQHTX;
+				DEVELOPMENT_TEAM = 6N749ZZ4B3;
 				INFOPLIST_FILE = KitaNonton/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

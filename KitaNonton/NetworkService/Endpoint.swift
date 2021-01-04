@@ -19,20 +19,24 @@ enum Endpoint {
 }
 
 extension Endpoint: IEndpoint {
-    var path: String {
+    var url: String {
+        return Constant.apiBaseUrl + path
+    }
+
+    private var path: String {
         switch self {
         case .popularMovies:
-            return Constant.apiBaseUrl + "/movie/popular"
+            return "/movie/popular"
         case .playingMovies:
-            return Constant.apiBaseUrl + "/movie/now_playing"
+            return "/movie/now_playing"
         case .upcomingMovies:
-            return Constant.apiBaseUrl + "/movie/upcoming"
+            return "/movie/upcoming"
         case .topratedMovies:
-            return Constant.apiBaseUrl + "/movie/top_rated"
+            return "/movie/top_rated"
         case .movieDetail(let model):
-            return Constant.apiBaseUrl + "/movie/\(model.id)"
+            return "/movie/\(model.id)"
         case .movieReviews(let model):
-            return Constant.apiBaseUrl + "/movie/\(model.id)/reviews"
+            return "/movie/\(model.id)/reviews"
         }
     }
 
